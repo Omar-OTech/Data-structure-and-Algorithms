@@ -1,13 +1,10 @@
 def get_middle(s):
     start = len(s) // 2 - 1
-    print(start)
     end = len(s) // 2 + 1
-    print(end)
-    # if len(s) % 2 == 0:
-    #     return s[start:end]
-    # if len(s) % 2 != 0:
-    #     return s[len(s) // 2]
-
+    if len(s) % 2 == 0:
+        return s[start:end]
+    if len(s) % 2 != 0:
+        return s[len(s) // 2]
 
 
 print(get_middle("test"))     # "es"
