@@ -1,10 +1,10 @@
 def cube_odd(arr):
-    # Check if all elements in the list are integers
-    if not all(isinstance(x, int) for x in arr):
-        return None
-    
-    # Sum the cubes of odd integers
-    return sum(x**3 for x in arr if x % 2 != 0)
+    for i in arr:
+        if type(i) != int:
+            return None
+    # Cube odd numbers and sum them
+    return sum([i**3 for i in arr if i % 2 != 0])
+
 
 # Test cases
 print(cube_odd([1, 2, 3, 4]))            # 28 (1^3 + 3^3 = 1 + 27 = 28)
