@@ -17,5 +17,5 @@ console.log(`Today is ${Day}-${month+1}-${year} Time Now ${hours}:${min}:${sec}`
 var date = `Today is ${Day}-${month+1}-${year} Time Now ${hours}:${min}:${sec}`;
 
 var res = document.getElementById('date');
-res.innerHTML += `<p>${date}</p>`
+res.innerHTML += `<h2>${date}</h2>`
 
