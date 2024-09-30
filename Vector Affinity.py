@@ -1,11 +1,11 @@
 def vector_affinity(a, b):
-    if len(a) == 0 and len(b) == 0:
+    if not a and not b:
         return 1.0
-    if len(a) == 0 or len(b) == 0:
-        return 0.0
-    if len(a) > len(b):
-        a, b = b, a
-    return sum([1 if a[i] == b[i] else 0 for i in range(len(a))]) / len(b)
+    
+    max_length = max(len(a), len(b))
+    matches = sum(1 for i, j in zip(a, b) if i == j)
+    
+    return matches / max_length
 
 
 print(vector_affinity([1,2,3], [1,2,3,4,5]))     # 0.6
