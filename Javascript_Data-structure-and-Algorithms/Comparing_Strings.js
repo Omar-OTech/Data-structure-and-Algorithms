@@ -19,3 +19,9 @@ const compareStr = (a, b) => {
 console.log(compareStr("hello", "world")); // -1
 console.log(compareStr("hello", "hello")); // 1
 console.log(compareStr("world", "hello")); // 1
+
+let arr = ["hello", "world", "apple", "banana"];
+arr.sort((a, b) => {
+    return a.localeCompare(b);
+});
+console.log(arr); // [ 'apple', 'banana', 'hello', 'world' ]
